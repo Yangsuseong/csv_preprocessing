@@ -1,4 +1,5 @@
 import csv, codecs
+import os
 
 
 csv_file_dir = input("csv파일의 경로를 정확히 입력하세요. : ")
@@ -49,6 +50,14 @@ for f in csv_list:
             i += 1
             j += 1
         # 만약 reader(cells)의 길이가 0이면 빈칸이기 때문에 Z을 리스트에 추가한다.
+        
+        elif cells==[' ']:
+            label.append('Z')
+            print(i)
+            #바뀐 인덱스
+            i += 1
+            j += 1
+        # Space인 경우에도 Z로 변환.
     
     
         # 'N'들을 모두 'Z'로 바꾼다.
